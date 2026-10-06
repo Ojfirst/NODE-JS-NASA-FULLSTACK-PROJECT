@@ -1,0 +1,4 @@
+name: NASA PROJECT CI
+on:
+  push:
+    branches: [main]
