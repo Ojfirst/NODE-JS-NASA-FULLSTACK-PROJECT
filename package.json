@@ -1,0 +1,32 @@
+{
+	"name": "nasa-project",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"install-client": "npm install --prefix client",
+		"install-server": "npm install --prefix server",
+		"install": "npm run install-client && npm run install-server",
+		"server": "npm run dev --prefix server",
+		"client": "npm run start --prefix client",
+		"watch": "npm run server & npm run client",
+		"deploy": "npm run build --prefix client && npm run start --prefix server",
+		"deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+		"test": "npm test --prefix server && npm test --prefix client"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"concurrently": "^9.2.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ojfirst/NODE-NASA-PROJECT.git"
+	},
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/Ojfirst/NODE-NASA-PROJECT/issues"
+	},
+	"homepage": "https://github.com/Ojfirst/NODE-NASA-PROJECT#readme"
+}

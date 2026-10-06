@@ -1,0 +1,40 @@
+{
+	"name": "nasa-project-api",
+	"version": "1.0.0",
+	"main": "src/server.js",
+	"type": "module",
+	"scripts": {
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+		"test-watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+		"start": "PORT=5001 node --env-file=.env src/server.js",
+		"dev": "nodemon -L --env-file=.env src/server.js",
+		"cluster": "pm2 start src/server.js -i max",
+		"pm2-cluster": "pm2 start ecosystem/config.js"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"transform": {}
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "NASA Mission Control API",
+	"dependencies": {
+		"cors": "^2.8.6",
+		"cross-env": "^10.1.0",
+		"csv-parse": "^7.0.2",
+		"dotenv": "^18.0.4",
+		"express": "^5.2.1",
+		"mongodb": "^7.1.1",
+		"mongoose": "^9.4.1",
+		"morgan": "^1.10.1",
+		"pino": "^10.3.1",
+		"pino-http": "^11.0.0",
+		"pm2": "^7.0.4"
+	},
+	"devDependencies": {
+		"jest": "^30.3.0",
+		"nodemon": "^3.1.14",
+		"supertest": "^7.2.2"
+	}
+}
