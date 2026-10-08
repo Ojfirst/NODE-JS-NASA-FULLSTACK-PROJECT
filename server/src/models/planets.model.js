@@ -40,7 +40,6 @@ function loadPlanetsData() {
 	});
 }
 
-
 async function savePlanets(planet) {
 	try {
 		await planetsDB.updateOne(

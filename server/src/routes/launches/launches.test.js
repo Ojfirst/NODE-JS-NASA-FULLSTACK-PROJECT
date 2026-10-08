@@ -4,10 +4,12 @@ import {
 	mongoDbConnection,
 	mongoDbDisconnection,
 } from '../../services/mongo.js';
+import { loadPlanetsData } from '../../models/planets.model.js';
 
 describe('Launches API', () => {
 	beforeAll(async () => {
 		await mongoDbConnection();
+		await loadPlanetsData();
 	});
 
 	afterAll(async () => {
