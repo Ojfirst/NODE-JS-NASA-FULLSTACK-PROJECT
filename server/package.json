@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"test-watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
-		"start": "PORT=5001 node --env-file=.env src/server.js",
+		"start": "node --env-file=.env src/server.js",
 		"dev": "nodemon -L --env-file=.env src/server.js",
 		"cluster": "pm2 start src/server.js -i max",
 		"pm2-cluster": "pm2 start ecosystem/config.js"
